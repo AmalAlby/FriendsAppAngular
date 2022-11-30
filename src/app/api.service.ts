@@ -14,4 +14,8 @@ export class ApiService {
 
   }
 
+  addfriend=(datatosend:any)=>{
+    return this.http.post("https://dummyapifriends.herokuapp.com/adddata",datatosend)
+  }
+
 }
