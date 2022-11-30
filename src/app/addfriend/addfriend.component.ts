@@ -23,6 +23,16 @@ export class AddfriendComponent {
     this.api.addfriend(data).subscribe(
       (response:any)=>{
         console.log(response)
+        if(response.status=="success"){
+          alert("Friend Details Added Successfully")
+          this.name=""
+          this.friendName=""
+          this.friendNickName=""
+          this.DescribeYourFriend=""
+        }
+        else{
+          alert("Something Went Wrong")
+        }
       }
     )
 
